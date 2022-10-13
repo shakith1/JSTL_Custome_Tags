@@ -12,22 +12,28 @@ import javax.servlet.jsp.tagext.TagSupport;
  *
  * @author Shakith
  */
-public class MyCalculation extends TagSupport{
-    private Integer value;
+public class MyCalculation extends TagSupport {
 
-    public void setValue(Integer value) {
-        this.value = value;
+    private Integer value1;
+    private Integer value2;
+
+    public void setValue1(Integer value1) {
+        this.value1 = value1;
+    }
+
+    public void setValue2(Integer value2) {
+        this.value2 = value2;
     }
 
     @Override
     public int doStartTag() throws JspException {
         JspWriter out = pageContext.getOut();
         try {
-            out.print(value * value);
+            out.print(value1 * value1);
         } catch (Exception e) {
             e.printStackTrace();
         }
         return SKIP_BODY;
     }
-    
+
 }

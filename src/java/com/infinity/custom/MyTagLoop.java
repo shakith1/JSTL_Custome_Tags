@@ -33,4 +33,12 @@ public class MyTagLoop extends TagSupport{
             return EVAL_BODY_AGAIN;
         return SKIP_BODY;
     }  
+
+    @Override
+    public int doEndTag() throws JspException {
+        System.out.println("doEndTag...");
+        return SKIP_BODY;
+    }
+    
+    
 }

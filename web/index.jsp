@@ -14,11 +14,15 @@
     </head>
     <body>
         <mt:messaage/>
-        
+
         <mt:calculation value1="2" value2="20" var="x" scope="application"/>
-        
+
         <mt:loop count="5">
             <h1>Hello</h1>
+        </mt:loop>
+
+        <mt:loop count="2">
+            <h1>OK</h1>
         </mt:loop>
     </body>
 </html>

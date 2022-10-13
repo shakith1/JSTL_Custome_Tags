@@ -17,6 +17,10 @@ import javax.servlet.jsp.tagext.TagSupport;
  */
 public class MyTag extends TagSupport{
 
+    public MyTag() {
+        System.out.println("My Tag");
+    }
+
     @Override
     public int doStartTag() throws JspException {
         JspWriter out = pageContext.getOut();

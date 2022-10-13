@@ -20,7 +20,13 @@ public class MyTagLoop extends TagSupport{
 
     @Override
     public int doStartTag() throws JspException {
-        
+        System.out.println("doStartTag...");
+        return EVAL_BODY_INCLUDE;
     }
-    
+
+    @Override
+    public int doAfterBody() throws JspException {
+        System.out.println("doAfterBody...");
+        return EVAL_BODY_AGAIN;
+    }  
 }

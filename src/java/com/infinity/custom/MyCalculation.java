@@ -29,7 +29,7 @@ public class MyCalculation extends TagSupport {
     public int doStartTag() throws JspException {
         JspWriter out = pageContext.getOut();
         try {
-            out.print(value1 * value1);
+            out.print(value1 * value2);
         } catch (Exception e) {
             e.printStackTrace();
         }

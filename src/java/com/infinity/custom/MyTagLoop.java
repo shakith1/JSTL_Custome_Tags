@@ -12,6 +12,11 @@ import javax.servlet.jsp.tagext.TagSupport;
  * @author Shakith
  */
 public class MyTagLoop extends TagSupport{
+    private Integer count;
+
+    public void setCount(Integer count) {
+        this.count = count;
+    }
 
     @Override
     public int doStartTag() throws JspException {

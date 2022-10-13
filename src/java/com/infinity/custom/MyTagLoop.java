@@ -13,6 +13,7 @@ import javax.servlet.jsp.tagext.TagSupport;
  */
 public class MyTagLoop extends TagSupport{
     private Integer count;
+    private Integer start;
 
     public void setCount(Integer count) {
         this.count = count;
@@ -21,12 +22,15 @@ public class MyTagLoop extends TagSupport{
     @Override
     public int doStartTag() throws JspException {
         System.out.println("doStartTag...");
+        this.start = 0;
         return EVAL_BODY_INCLUDE;
     }
 
     @Override
     public int doAfterBody() throws JspException {
         System.out.println("doAfterBody...");
-        return EVAL_BODY_AGAIN;
+        if(++start < count)
+            return EVAL_BODY_AGAIN;
+        return SKIP_BODY;
     }  
 }

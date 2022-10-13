@@ -32,5 +32,9 @@
     <tag>
         <name>loop</name>
         <tag-class>com.infinity.custom.MyTagLoop</tag-class>
+        <attribute>
+            <name>count</name>
+            <required>true</required>
+        </attribute>
     </tag>
 </taglib>

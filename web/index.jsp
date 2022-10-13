@@ -15,6 +15,6 @@
     <body>
         <mt:messaage/>
         
-        <mt:calculation value="1"/>
+        <mt:calculation value1="10" value2="20"/>
     </body>
 </html>

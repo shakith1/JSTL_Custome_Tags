@@ -17,6 +17,11 @@ public class MyCalculation extends TagSupport {
     private Integer value1;
     private Integer value2;
     private String var;
+    private String scope;
+
+    public void setScope(String scope) {
+        this.scope = scope;
+    }
 
     public void setVar(String var) {
         this.var = var;
@@ -34,7 +39,25 @@ public class MyCalculation extends TagSupport {
     public int doStartTag() throws JspException {
         JspWriter out = pageContext.getOut();
         if (var != null && !var.isEmpty()) {
-            pageContext.setAttribute(var, value1 * value2);
+            if (scope != null && !scope.isEmpty()) {
+                switch (scope) {
+                    case "application":
+                        pageContext.setAttribute(var, value1 * value2, pageContext.APPLICATION_SCOPE);
+                        break;
+                    case "session":
+                        pageContext.setAttribute(var, value1 * value2, pageContext.SESSION_SCOPE);
+                        break;
+                    case "page":
+                        pageContext.setAttribute(var, value1 * value2);
+                        break;
+                    case "request":
+                        pageContext.setAttribute(var, value1 * value2,pageContext.REQUEST_SCOPE);
+                        break;
+                }
+            } else {
+                pageContext.setAttribute(var, value1 * value2);
+            }
+
         } else {
             try {
                 out.print(value1 * value2);

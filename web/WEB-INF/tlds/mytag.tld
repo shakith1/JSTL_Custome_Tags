@@ -10,7 +10,7 @@
   </tag>
   
   <tag>
-      <name>Calculation</name>
+      <name>calculation</name>
       <tag-class>com.infinity.custom.MyCalculation</tag-class>
       <attribute>
           <name>value</name>

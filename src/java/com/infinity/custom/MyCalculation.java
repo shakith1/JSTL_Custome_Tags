@@ -16,6 +16,11 @@ public class MyCalculation extends TagSupport {
 
     private Integer value1;
     private Integer value2;
+    private String var;
+
+    public void setVar(String var) {
+        this.var = var;
+    }
 
     public void setValue1(Integer value1) {
         this.value1 = value1;
@@ -28,10 +33,14 @@ public class MyCalculation extends TagSupport {
     @Override
     public int doStartTag() throws JspException {
         JspWriter out = pageContext.getOut();
-        try {
-            out.print(value1 * value2);
-        } catch (Exception e) {
-            e.printStackTrace();
+        if (var != null && !var.isEmpty()) {
+            pageContext.setAttribute("var", value1 * value2);
+        } else {
+            try {
+                out.print(value1 * value2);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
         return SKIP_BODY;
     }

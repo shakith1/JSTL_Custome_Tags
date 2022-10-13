@@ -17,6 +17,8 @@
         
         <mt:calculation value1="2" value2="20" var="x" scope="application"/>
         
-        ${x}
+        <mt:loop count="5">
+            <h1>Hello</h1>
+        </mt:loop>
     </body>
 </html>

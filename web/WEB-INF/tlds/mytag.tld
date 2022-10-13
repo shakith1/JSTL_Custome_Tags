@@ -14,6 +14,7 @@
       <tag-class>com.infinity.custom.MyCalculation</tag-class>
       <attribute>
           <name>value</name>
+          <required>true</required>
       </attribute>
   </tag>
 </taglib>

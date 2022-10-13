@@ -28,4 +28,9 @@
             <required>true</required>
         </attribute>
     </tag>
+    
+    <tag>
+        <name>loop</name>
+        <tag-class>com.infinity.custom.MyTagLoop</tag-class>
+    </tag>
 </taglib>

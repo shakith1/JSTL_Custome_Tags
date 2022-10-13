@@ -16,6 +16,9 @@
             <name>var</name>
         </attribute>
         <attribute>
+            <name>scope</name>
+        </attribute>
+        <attribute>
             <name>value1</name>
             <required>true</required>
             <rtexprvalue>true</rtexprvalue>

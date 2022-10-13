@@ -13,6 +13,9 @@
         <name>calculation</name>
         <tag-class>com.infinity.custom.MyCalculation</tag-class>
         <attribute>
+            <name>var</name>
+        </attribute>
+        <attribute>
             <name>value1</name>
             <required>true</required>
             <rtexprvalue>true</rtexprvalue>

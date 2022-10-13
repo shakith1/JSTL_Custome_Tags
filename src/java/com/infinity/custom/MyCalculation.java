@@ -34,7 +34,7 @@ public class MyCalculation extends TagSupport {
     public int doStartTag() throws JspException {
         JspWriter out = pageContext.getOut();
         if (var != null && !var.isEmpty()) {
-            pageContext.setAttribute("var", value1 * value2);
+            pageContext.setAttribute(var, value1 * value2);
         } else {
             try {
                 out.print(value1 * value2);

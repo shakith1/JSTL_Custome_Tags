@@ -37,7 +37,7 @@ public class MyTagLoop extends TagSupport{
     @Override
     public int doEndTag() throws JspException {
         System.out.println("doEndTag...");
-        return SKIP_BODY;
+        return SKIP_PAGE;
     }
     
     
